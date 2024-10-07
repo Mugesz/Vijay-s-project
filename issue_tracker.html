@@ -1,51 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Issue Tracker</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <nav>
+      <div class="div-flex">
+        <div>
+          <img  
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPvwrzIkhCB1Sx1a1YXefc6k-T23EGK-RWZg&s"
+            class="logoss"
+            alt="logo"
+            height="60px"
+            width="80px"
+          />
+        </div>
         <ul>
-            <li><a href="dashboard.html">Home</a></li>
-            <li><a href="issue_tracker.html">Issue Tracker</a></li>
+          <li><a href="dashboard.html">Home</a></li>
+          <li><a href="issue_tracker.html">Issue Tracker</a></li>
         </ul>
-        
+      </div>
     </nav>
     <div class="form-section">
-        <h2>Report an Issue</h2>
-        <form id="issueForm">
-            <input type="text" placeholder="Issue Title" required>
-            <select name="Select issue" id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="mercedes">Mercedes</option>
-                <option value="audi">Audi</option>
-              </select>
-            <textarea placeholder="Issue Description" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
+      <h2>Report an Issue</h2>
+      <form id="issueForm">
+        <input type="text" placeholder="Issue Title" required />
+        <select name="Select issue" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+        <textarea placeholder="Issue Description" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
     </div>
 
     <div id="popup" class="popup">
-        <p>Success! Issue Submitted.</p>
-        <button onclick="closePopup()">Close</button>
+      <p>Success! Issue Submitted.</p>
+      <button onclick="closePopup()">Close</button>
     </div>
 
     <script>
-        const issueForm = document.getElementById('issueForm');
-        const popup = document.getElementById('popup');
+      const issueForm = document.getElementById("issueForm");
+      const popup = document.getElementById("popup");
 
-        issueForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            popup.style.display = 'block';
-        });
+      issueForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        popup.style.display = "block";
+      });
 
-        function closePopup() {
-            popup.style.display = 'none';
-        }
+      function closePopup() {
+        popup.style.display = "none";
+      }
     </script>
-</body>
+  </body>
 </html>
